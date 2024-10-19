@@ -1,0 +1,22 @@
+{
+  "name": "market-bot",
+  "version": "0.0.1",
+  "description": "A simple bot to list sellers of products for video games.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aevans1987/market-bot.git"
+  },
+  "author": "Andrew Evans",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aevans1987/market-bot/issues"
+  },
+  "homepage": "https://github.com/aevans1987/market-bot#readme",
+  "dependencies": {
+    "discord.js": "^14.16.3"
+  }
+}
