@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/aevans1987/market-bot#readme",
   "dependencies": {
-    "discord.js": "^14.16.3"
+    "discord.js": "^14.16.3",
+    "pg": "^8.13.0"
   }
 }
