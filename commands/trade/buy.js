@@ -9,6 +9,7 @@ module.exports = {
             option.setName('product')
                 .setDescription('Product to buy.')
                 .setRequired(true)
+                .setMaxLength(11)
         ),
     async execute(interaction) {
         // Build the query to send over

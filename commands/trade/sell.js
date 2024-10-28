@@ -9,6 +9,7 @@ module.exports = {
             option.setName('product')
                 .setDescription('Product to sell.')
                 .setRequired(true)
+                .setMaxLength(11)
         )
         .addNumberOption( option => 
             option.setName('price')
@@ -18,6 +19,7 @@ module.exports = {
         .addStringOption(option=> 
             option.setName('availability')
             .setDescription('Product Availability')
+            .setMaxLength(20)
         ),
     async execute(interaction) {
         console.log('Beginning new Sell order.')
