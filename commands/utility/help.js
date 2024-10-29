@@ -35,5 +35,12 @@ module.exports = {
                 value: "Allows an Admin to delete an order posted by a user."
             }
         ]
+        const embed = new EmbedBuilder()
+            .setTitle('Help Info!.')
+            .setDescription(`Command Info`)
+            .setTimestamp(Date.now())
+            .setColor('Green')
+            .addFields(array);
+        await interaction.reply({embeds: [embed]})
 	},
 };
