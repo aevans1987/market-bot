@@ -63,8 +63,7 @@ module.exports = {
                 .addFields(array);
         }
 
-
-        await interaction.reply({embeds: [embed]})
+        await interaction.reply({embeds: [embed], ephemeral: true})
         //await interaction.reply({content: `Selling ${interaction.options.getString('product')} at ${interaction.options.getNumber('price')} with no listed availability ${result}.`, ephemeral: true })
     },
 };
