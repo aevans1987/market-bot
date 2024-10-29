@@ -20,7 +20,7 @@ async function db_query(query, type){
         //console.log(result.rows)
     
         db_client.end().then(()=> console.log("DB Client Closed"));
-        console.log(type)
+        //console.log(type)
         if(type=='create'){
             console.log('Create Succeeded')
             return 'Succeeded';
