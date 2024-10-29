@@ -52,6 +52,5 @@ module.exports = {
             .setColor('Green')
             .addFields(array);
         await interaction.reply({embeds: [embed]}) 
-        //await interaction.reply({content: `Selling ${interaction.options.getString('product')} at ${interaction.options.getNumber('price')} with no listed availability ${result}.`, ephemeral: true })
     },
 };

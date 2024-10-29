@@ -16,7 +16,7 @@ module.exports = {
         // Adding some extra overhead on this to ensure we provide proper feedback to the client.
         const select_query = `SELECT order_id, product, price, availability, seller FROM public."${interaction.guild.id}" WHERE order_id = ${interaction.options.getNumber('id')};`
         const select_result = await db_query(select_query, 'select');
-        // Delete will require some extra, we need both the ID and the seller, this will ensure that Joe can't delete John's listings.
+        // Admin delete does not require a direct match to the seller ID.
         const delete_query = `DELETE FROM public."${interaction.guild.id}" WHERE order_id = ${interaction.options.getNumber('id')};`;
         const delete_result = await db_query(delete_query, 'create');
         console.log(delete_result);
@@ -59,6 +59,5 @@ module.exports = {
             .addFields(array);
 
         await interaction.reply({embeds: [embed]})
-        //await interaction.reply({content: `Selling ${interaction.options.getString('product')} at ${interaction.options.getNumber('price')} with no listed availability ${result}.`, ephemeral: true })
     },
 };
