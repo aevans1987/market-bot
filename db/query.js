@@ -12,19 +12,20 @@ async function db_query(query, type){
     });
 
     try {
-        console.log(`connecting!`)
-        await db_client.connect().then(()=> console.log("connected"));
+        //console.log(`connecting!`)
+        await db_client.connect().then(()=> console.log("DB Client Connected"));
     
         console.log('starting query: ' + query)
         var result = await db_client.query({rowMode: 'array', text: query})
         //console.log(result.rows)
     
-        console.log('ending')
-        db_client.end();
+        db_client.end().then(()=> console.log("DB Client Closed"));
         console.log(type)
         if(type=='create'){
+            console.log('Create Succeeded')
             return 'Succeeded';
         } else {
+            console.log('Select Succeeded')
             return result.rows;
         }
     } catch (error) {

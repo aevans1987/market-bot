@@ -12,6 +12,7 @@ module.exports = {
                 .setMaxLength(11)
         ),
     async execute(interaction) {
+        console.log('Starting buy command')
         // Build the query to send over
         const query = `SELECT seller, product, price, availability FROM public."${interaction.guild.id}" WHERE product LIKE '${interaction.options.getString('product').toUpperCase()}%';`;
         // Send it over, this is a select query so we are going to specify that. Select will ensure that the respose is appropriate.

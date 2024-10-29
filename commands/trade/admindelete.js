@@ -13,6 +13,7 @@ module.exports = {
         .setDefaultMemberPermissions(PermissionFlagsBits.Administrator), 
 
     async execute(interaction) {
+        console.log('Starting Admin Delete Command')
         // Adding some extra overhead on this to ensure we provide proper feedback to the client.
         const select_query = `SELECT order_id, product, price, availability, seller FROM public."${interaction.guild.id}" WHERE order_id = ${interaction.options.getNumber('id')};`
         const select_result = await db_query(select_query, 'select');

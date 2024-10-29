@@ -10,6 +10,7 @@ module.exports = {
                 .setDescription('Product to Search for.')
         ), */
     async execute(interaction) {
+        console.log('Starting My order listing')
         // Build the query to send over
         const query = `SELECT order_id, product, price, availability FROM public."${interaction.guild.id}" WHERE seller = ${interaction.user.id};`;
         // Send it over, this is a select query so we are going to specify that. Select will ensure that the respose is appropriate.
